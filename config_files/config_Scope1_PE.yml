@@ -1,5 +1,5 @@
 ---
-pipeline: Scope1_PE_run1
+pipeline: Scope1_PE_run2
 output_dir: profiles
 platemap_well_column: Metadata_well_position
 compartments:

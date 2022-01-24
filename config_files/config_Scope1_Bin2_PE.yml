@@ -1,5 +1,5 @@
 ---
-pipeline: Scope1_Bin2_PE_run1
+pipeline: Scope1_Bin2_PE_run2
 output_dir: profiles
 platemap_well_column: Metadata_well_position
 compartments:
@@ -69,7 +69,7 @@ options:
   float_format: "%.5g"
   samples: all
 ---
-batch: 2020_11_16_Scope1_PE
+batch: 2020_11_16_Scope1_Bin2_PE
 plates:
   - name: CPBroadPhenixC1PlaneP1
     process: true
