@@ -1,5 +1,5 @@
 ---
-pipeline: Scope1_MolDev_run1
+pipeline: Scope1_YokogawaJapan_20X_run2
 output_dir: profiles
 platemap_well_column: Metadata_well_position
 compartments:
@@ -20,7 +20,7 @@ annotate:
   well_column: Metadata_Well
   external :
     perform: true
-    file: JUMP-Target-1_compound_metadata.tsv
+    file: JUMP-MOA_compound_metadata_addedcols.tsv
     merge_column: broad_sample
 normalize:
   perform: true
@@ -69,21 +69,9 @@ options:
   float_format: "%.5g"
   samples: all
 ---
-batch: 2020_11_06_Scope1_MolDev
+batch: Scope1_Yokogawa_Japan_20X
 plates:
-  - name: Plate2_PCO_6ch_4site_10XPA
-    process: true
-  - name: Plate2_PCO_6ch_9site_20XPA
-    process: true
-  - name: Plate3_PCO_6ch_4site_10XPA_Crest     
-    process: true
-  - name: Plate3_PCO_6ch_4site_10XPA_Crestz    
-    process: true
-  - name: Plate3_PCO_6ch_4site_20XPA_Crestz     
-    process: true
-  - name: Plate3_PCO_6ch_9site_20XPA_Crest
-    process: true
-  - name: Plate3_PCO_6ch_Adaptive_20XPA
+  - name: 20201021T092317
     process: true
 process: true
 

@@ -1,5 +1,5 @@
 ---
-pipeline: Scope1_YokogawaUS_run1
+pipeline: Scope1_PE_Bin1_Confocal_1Plane_run1
 output_dir: profiles
 platemap_well_column: Metadata_well_position
 compartments:
@@ -20,7 +20,7 @@ annotate:
   well_column: Metadata_Well
   external :
     perform: true
-    file: JUMP-Target-1_compound_metadata.tsv
+    file: JUMP-MOA_compound_metadata.tsv
     merge_column: broad_sample
 normalize:
   perform: true
@@ -69,23 +69,15 @@ options:
   float_format: "%.5g"
   samples: all
 ---
-batch: 2020_11_16_Scope1_YokogawaUS
+batch: Scope1_PE_Bin1_Confocal_1Plane
 plates:
-  - name: BRO0117014_10x
+  - name: CP_Broad_Phenix_C_BIN1_1Plane_P1
     process: true
-  - name: BRO0117033_20x
+  - name: CP_Broad_Phenix_C_BIN1_1Plane_P2 
     process: true
-  - name: BRO0117033_20xb     
+  - name: CP_Broad_Phenix_C_BIN1_1Plane_P3 
     process: true
-  - name: BRO0117056_20x    
-    process: true
-  - name: BRO0117056_20xb     
-    process: true
-  - name: BRO0117059_20X
-    process: true
-  - name: BRO0117059_40x
-    process: true
-  - name: BRO01177034_20x 
+  - name: CP_Broad_Phenix_C_BIN1_1Plane_P4 
     process: true
 process: true
 
