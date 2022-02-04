@@ -20,7 +20,7 @@ annotate:
   well_column: Metadata_Well
   external :
     perform: true
-    file: JUMP-MOA_compound_metadata_addedcols.tsv
+    file: JUMP-MOA_compound_metadata.tsv
     merge_column: broad_sample
 normalize:
   perform: true

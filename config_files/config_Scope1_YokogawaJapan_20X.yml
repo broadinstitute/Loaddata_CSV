@@ -1,5 +1,5 @@
 ---
-pipeline: Scope1_YokogawaJapan_20X_run2
+pipeline: Scope1_Yokogawa_Japan_20X_run1
 output_dir: profiles
 platemap_well_column: Metadata_well_position
 compartments:
@@ -20,7 +20,7 @@ annotate:
   well_column: Metadata_Well
   external :
     perform: true
-    file: JUMP-MOA_compound_metadata_addedcols.tsv
+    file: JUMP-MOA_compound_metadata.tsv
     merge_column: broad_sample
 normalize:
   perform: true
