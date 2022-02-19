@@ -1,5 +1,5 @@
 ---
-pipeline: Scope1_Yokogawa_US_20X_5Ch_run1
+pipeline: Scope1_Yokogawa_US_20X_5Ch_run2
 output_dir: profiles
 platemap_well_column: Metadata_well_position
 compartments:
@@ -74,8 +74,6 @@ plates:
   - name: BRO0117033_20xb
     process: true
   - name: BRO0117056_20x 
-    process: true
-  - name: BRO0117056_20xb 
     process: true
 process: true
 

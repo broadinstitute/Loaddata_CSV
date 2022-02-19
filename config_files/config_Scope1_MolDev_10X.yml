@@ -1,5 +1,5 @@
 ---
-pipeline: Scope1_MolDev_10X_run1
+pipeline: Scope1_MolDev_10X_run2
 output_dir: profiles
 platemap_well_column: Metadata_well_position
 compartments:
@@ -74,8 +74,6 @@ plates:
   - name: Plate2_PCO_6ch_4site_10XPA
     process: true
   - name: Plate3_PCO_6ch_4site_10XPA_Crest 
-    process: true
-  - name: Plate3_PCO_6ch_4site_10XPA_Crestz 
     process: true
 process: true
 

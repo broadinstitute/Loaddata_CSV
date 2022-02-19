@@ -1,0 +1,250 @@
+---
+pipeline: Scope1_943sites_2field_subsample_run1
+output_dir: profiles
+platemap_well_column: Metadata_well_position
+compartments:
+  - cells
+  - cytoplasm
+  - nuclei
+aggregate:
+  perform: false
+  plate_column: Metadata_Plate
+  well_column: Metadata_Well
+  method: median
+  fields: 
+    - 1
+    - 2       	
+  image_feature_categories:
+    - Count
+    - Intensity
+annotate:
+  perform: true
+  well_column: Metadata_Well
+  external :
+    perform: true
+    file: JUMP-MOA_compound_metadata.tsv
+    merge_column: broad_sample
+normalize:
+  perform: true
+  method: mad_robustize
+  features: infer
+  mad_robustize_fudge_factor: 0
+  image_features: false
+normalize_negcon:
+  perform: true
+  method: mad_robustize
+  features: infer
+  mad_robustize_fudge_factor: 0
+  image_features: false
+feature_select:
+  perform: true
+  features: infer
+  level: batch
+  gct: true
+  image_features: false
+  operations:
+    - variance_threshold
+    - correlation_threshold
+    - drop_na_columns
+    - blocklist
+feature_select_negcon:
+  perform: true
+  features: infer
+  level: batch
+  gct: true
+  image_features: false
+  operations:
+    - variance_threshold
+    - correlation_threshold
+    - drop_na_columns
+    - blocklist
+quality_control:
+  perform: true
+  summary:
+    perform: false
+    row: Metadata_Row
+    column: Metadata_Col
+  heatmap:
+    perform : true
+options:
+  compression: gzip
+  float_format: "%.5g"
+  samples: all
+---
+batch: Scope1_MolDev_20X_9site
+plates:
+  - name: Plate2_PCO_6ch_9site_20XPA
+    process: true
+  - name: Plate3_PCO_6ch_9site_20XPA_Crest 
+    process: true
+process: true
+---
+batch: Scope1_MolDev_10X
+plates:
+  - name: Plate2_PCO_6ch_4site_10XPA
+    process: true
+  - name: Plate3_PCO_6ch_4site_10XPA_Crest
+    process: true
+process: true
+---
+batch: Scope1_MolDev_10X_4siteZ      
+plates:
+  - name: Plate3_PCO_6ch_4site_10XPA_Crestz
+    process: true
+process: true
+---
+batch: Scope1_MolDev_20X_4site      
+plates:
+  - name: Plate3_PCO_6ch_4site_20XPA_Crestz
+    process: true
+process: true
+---
+batch: Scope1_Nikon_20X
+plates:
+  - name: BR00117061a
+    process: true
+  - name: BR00117062a
+    process: true
+  - name: BR00117063b                     
+    process: true
+process: true
+---
+batch: Scope1_Yokogawa_Japan_20X       
+plates:
+  - name: 20201021T092317               
+    process: true
+process: true
+---
+batch: Scope1_Yokogawa_US_10X 
+plates:
+  - name: BRO0117014_10x                   
+    process: true
+process: true
+---
+batch: Scope1_Yokogawa_US_20X_5Ch
+plates:
+  - name: BRO0117033_20xb
+    process: true
+  - name: BRO0117056_20x
+    process: true
+process: true
+---
+batch: Scope1_Yokogawa_US_20X_5Ch_12Z
+plates:
+  - name: BRO0117056_20xb
+    process: true
+process: true
+---
+batch: Scope1_Yokogawa_US_20X_6Ch_BRO0117059
+plates:
+  - name: BRO0117059_20X
+    process: true
+process: true
+---
+batch: Scope1_Yokogawa_US_20X_6Ch_BRO01177034
+plates:
+  - name: BRO01177034_20x 
+    process: true
+process: true
+---
+batch: Scope1_Yokogawa_US_40X_BRO0117059
+plates:
+  - name: BRO0117059_40x 
+    process: true
+process: true
+---
+batch: Scope1_PE_Bin1_Confocal_1Plane
+plates:
+  - name: CP_Broad_Phenix_C_BIN1_1Plane_P1
+    process: true
+  - name: CP_Broad_Phenix_C_BIN1_1Plane_P2
+    process: true
+  - name: CP_Broad_Phenix_C_BIN1_1Plane_P3
+    process: true
+  - name: CP_Broad_Phenix_C_BIN1_1Plane_P4
+    process: true
+process: true
+---
+batch: Scope1_PE_Bin1_Confocal_3Plane
+plates:
+  - name: CP_Broad_Phenix_C_BIN1_P1
+    process: true
+  - name: CP_Broad_Phenix_C_BIN1_P2
+    process: true
+  - name: CP_Broad_Phenix_C_BIN1_P3
+    process: true
+  - name: CP_Broad_Phenix_C_BIN1_P4
+    process: true
+process: true
+---
+batch: Scope1_PE_Bin1_Widefield_1Plane
+plates:
+  - name: CP_Broad_Phenix_NC_BIN1_1Plane_P1       
+    process: true
+  - name: CP_Broad_Phenix_NC_BIN1_1Plane_P2       
+    process: true
+  - name: CP_Broad_Phenix_NC_BIN1_1Plane_P3       
+    process: true
+  - name: CP_Broad_Phenix_NC_BIN1_1Plane_P4       
+    process: true
+process: true
+---
+batch: Scope1_PE_Bin1_Widefield_3Plane
+plates:
+  - name: CP_Broad_Phenix_NC_BIN1_P1
+    process: true
+  - name: CP_Broad_Phenix_NC_BIN1_P2
+    process: true
+  - name: CP_Broad_Phenix_NC_BIN1_P3
+    process: true
+  - name: CP_Broad_Phenix_NC_BIN1_P4
+    process: true
+process: true
+---
+batch: Scope1_PE_Bin2_Confocal_1Plane
+plates:
+  - name: CPBroadPhenixC1PlaneP1      
+    process: true
+  - name: CPBroadPhenixC1PlaneP2       
+    process: true
+  - name: CPBroadPhenixC1PlaneP3       
+    process: true
+  - name: CPBroadPhenixC1PlaneP4       
+    process: true
+process: true
+---
+batch: Scope1_PE_Bin2_Confocal_3Plane 
+plates:
+  - name: CPBroadPhenixCP1           
+    process: true
+  - name: CPBroadPhenixCP2           
+    process: true
+  - name: CPBroadPhenixCP3           
+    process: true
+  - name: CPBroadPhenixCP4           
+    process: true
+process: true
+---
+batch: Scope1_PE_Bin2_Widefield_1Plane
+plates:
+  - name: CPBroadPhenixNC1PlaneP1      
+    process: true
+  - name: CPBroadPhenixNC1PlaneP2      
+    process: true
+  - name: CPBroadPhenixNC1PlaneP3      
+    process: true
+  - name: CPBroadPhenixNC1PlaneP4     
+    process: true
+process: true
+---
+batch: Scope1_PE_Bin2_Widefield_3Plane
+plates:
+  - name: CPBroadPhenixNCP1
+    process: true
+  - name: CPBroadPhenixNCP2
+    process: true
+  - name: CPBroadPhenixNCP3
+    process: true
+  - name: CPBroadPhenixNCP4
+    process: true
+process: true
