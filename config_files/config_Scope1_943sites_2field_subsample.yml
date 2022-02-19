@@ -13,7 +13,7 @@ aggregate:
   method: median
   fields: 
     - 1
-    - 2       	
+    - 2
   image_feature_categories:
     - Count
     - Intensity
