@@ -12,7 +12,7 @@ aggregate:
   well_column: Metadata_Well
   method: median
   fields: 
-    - 1       	
+    - 1 
   image_feature_categories:
     - Count
     - Intensity
