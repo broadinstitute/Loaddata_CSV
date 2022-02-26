@@ -1,0 +1,86 @@
+1siteSubSample_Scope1_MolDev_10X
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_MolDev_10X_4siteZ
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_MolDev_20X_4site
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_MolDev_20X_9site
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_Nikon_20X
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_PE_Bin1_Confocal_1Plane
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_PE_Bin1_Confocal_3Plane
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_PE_Bin1_Widefield_1Plane
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_PE_Bin1_Widefield_3Plane
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_PE_Bin2_Confocal_1Plane
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_PE_Bin2_Confocal_3Plane
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_PE_Bin2_Widefield_1Plane
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_PE_Bin2_Widefield_3Plane
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_Yokogawa_Japan_20X
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_Yokogawa_Japan_40X
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_Yokogawa_US_10X
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_Yokogawa_US_20X_5Ch
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_Yokogawa_US_20X_5Ch_12Z
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_Yokogawa_US_20X_6Ch_BRO0117059
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_Yokogawa_US_20X_6Ch_BRO01177034
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+1siteSubSample_Scope1_Yokogawa_US_40X_BRO0117059
+├── barcode_platemap.csv
+└── platemap
+    └── JUMP-MOA_compound_platemap.txt
+
+21 directories, 42 files
