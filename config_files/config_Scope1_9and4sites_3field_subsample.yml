@@ -7,7 +7,7 @@ compartments:
   - cytoplasm
   - nuclei
 aggregate:
-  perform: false
+  perform: true
   plate_column: Metadata_Plate
   well_column: Metadata_Well
   method: median
@@ -17,7 +17,6 @@ aggregate:
     - 3  
   image_feature_categories:
     - Count
-    - Intensity
 annotate:
   perform: true
   well_column: Metadata_Well
@@ -30,19 +29,19 @@ normalize:
   method: mad_robustize
   features: infer
   mad_robustize_fudge_factor: 0
-  image_features: false
+  image_features: true
 normalize_negcon:
   perform: true
   method: mad_robustize
   features: infer
   mad_robustize_fudge_factor: 0
-  image_features: false
+  image_features: true
 feature_select:
   perform: true
   features: infer
   level: batch
   gct: true
-  image_features: false
+  image_features: true
   operations:
     - variance_threshold
     - correlation_threshold
@@ -53,7 +52,7 @@ feature_select_negcon:
   features: infer
   level: batch
   gct: true
-  image_features: false
+  image_features: true
   operations:
     - variance_threshold
     - correlation_threshold
@@ -72,7 +71,7 @@ options:
   float_format: "%.5g"
   samples: all
 ---
-batch: Scope1_MolDev_20X_9site
+batch: 3siteSubSample_Scope1_MolDev_20X_9site
 plates:
   - name: Plate2_PCO_6ch_9site_20XPA
     process: true
@@ -80,7 +79,7 @@ plates:
     process: true
 process: true
 ---
-batch: Scope1_MolDev_10X
+batch: 3siteSubSample_Scope1_MolDev_10X
 plates:
   - name: Plate2_PCO_6ch_4site_10XPA
     process: true
@@ -88,19 +87,19 @@ plates:
     process: true
 process: true
 ---
-batch: Scope1_MolDev_10X_4siteZ      
+batch: 3siteSubSample_Scope1_MolDev_10X_4siteZ      
 plates:
   - name: Plate3_PCO_6ch_4site_10XPA_Crestz
     process: true
 process: true
 ---
-batch: Scope1_MolDev_20X_4site      
+batch: 3siteSubSample_Scope1_MolDev_20X_4site      
 plates:
   - name: Plate3_PCO_6ch_4site_20XPA_Crestz
     process: true
 process: true
 ---
-batch: Scope1_Nikon_20X
+batch: 3siteSubSample_Scope1_Nikon_20X
 plates:
   - name: BR00117061a
     process: true
@@ -110,19 +109,19 @@ plates:
     process: true
 process: true
 ---
-batch: Scope1_Yokogawa_Japan_20X       
+batch: 3siteSubSample_Scope1_Yokogawa_Japan_20X       
 plates:
   - name: 20201021T092317               
     process: true
 process: true
 ---
-batch: Scope1_Yokogawa_US_10X 
+batch: 3siteSubSample_Scope1_Yokogawa_US_10X 
 plates:
   - name: BRO0117014_10x                   
     process: true
 process: true
 ---
-batch: Scope1_Yokogawa_US_20X_5Ch
+batch: 3siteSubSample_Scope1_Yokogawa_US_20X_5Ch
 plates:
   - name: BRO0117033_20xb
     process: true
@@ -130,25 +129,25 @@ plates:
     process: true
 process: true
 ---
-batch: Scope1_Yokogawa_US_20X_5Ch_12Z
+batch: 3siteSubSample_Scope1_Yokogawa_US_20X_5Ch_12Z
 plates:
   - name: BRO0117056_20xb
     process: true
 process: true
 ---
-batch: Scope1_Yokogawa_US_20X_6Ch_BRO0117059
+batch: 3siteSubSample_Scope1_Yokogawa_US_20X_6Ch_BRO0117059
 plates:
   - name: BRO0117059_20X
     process: true
 process: true
 ---
-batch: Scope1_Yokogawa_US_20X_6Ch_BRO01177034
+batch: 3siteSubSample_Scope1_Yokogawa_US_20X_6Ch_BRO01177034
 plates:
   - name: BRO01177034_20x 
     process: true
 process: true
 ---
-batch: Scope1_Yokogawa_US_40X_BRO0117059
+batch: 3siteSubSample_Scope1_Yokogawa_US_40X_BRO0117059
 plates:
   - name: BRO0117059_40x 
     process: true
