@@ -1,0 +1,129 @@
+---
+pipeline: Scope1_9sites_4field_subsample_run1
+output_dir: profiles
+platemap_well_column: Metadata_well_position
+compartments:
+  - cells
+  - cytoplasm
+  - nuclei
+aggregate:
+  perform: true
+  plate_column: Metadata_Plate
+  well_column: Metadata_Well
+  method: median
+  fields: 
+    - 1
+    - 2
+    - 3
+    - 4
+  image_feature_categories:
+    - Count
+annotate:
+  perform: true
+  well_column: Metadata_Well
+  external :
+    perform: true
+    file: JUMP-MOA_compound_metadata.tsv
+    merge_column: broad_sample
+normalize:
+  perform: true
+  method: mad_robustize
+  features: infer
+  mad_robustize_fudge_factor: 0
+  image_features: true
+normalize_negcon:
+  perform: true
+  method: mad_robustize
+  features: infer
+  mad_robustize_fudge_factor: 0
+  image_features: true
+feature_select:
+  perform: true
+  features: infer
+  level: batch
+  gct: true
+  image_features: true
+  operations:
+    - variance_threshold
+    - correlation_threshold
+    - drop_na_columns
+    - blocklist
+feature_select_negcon:
+  perform: true
+  features: infer
+  level: batch
+  gct: true
+  image_features: true
+  operations:
+    - variance_threshold
+    - correlation_threshold
+    - drop_na_columns
+    - blocklist
+quality_control:
+  perform: true
+  summary:
+    perform: false
+    row: Metadata_Row
+    column: Metadata_Col
+  heatmap:
+    perform : true
+options:
+  compression: gzip
+  float_format: "%.5g"
+  samples: all
+---
+batch: 4siteSubSample_Scope1_MolDev_20X_9site
+plates:
+  - name: Plate2_PCO_6ch_9site_20XPA
+    process: true
+  - name: Plate3_PCO_6ch_9site_20XPA_Crest 
+    process: true
+process: true
+---
+batch: 4siteSubSample_Scope1_Nikon_20X
+plates:
+  - name: BR00117061a
+    process: true
+  - name: BR00117062a
+    process: true
+  - name: BR00117063b                     
+    process: true
+process: true
+---
+batch: 4siteSubSample_Scope1_Yokogawa_Japan_20X       
+plates:
+  - name: 20201021T092317               
+    process: true
+process: true
+---
+batch: 4siteSubSample_Scope1_Yokogawa_US_20X_5Ch
+plates:
+  - name: BRO0117033_20xb
+    process: true
+  - name: BRO0117056_20x
+    process: true
+process: true
+---
+batch: 4siteSubSample_Scope1_Yokogawa_US_20X_5Ch_12Z
+plates:
+  - name: BRO0117056_20xb
+    process: true
+process: true
+---
+batch: 4siteSubSample_Scope1_Yokogawa_US_20X_6Ch_BRO0117059
+plates:
+  - name: BRO0117059_20X
+    process: true
+process: true
+---
+batch: 4siteSubSample_Scope1_Yokogawa_US_20X_6Ch_BRO01177034
+plates:
+  - name: BRO01177034_20x 
+    process: true
+process: true
+---
+batch: 4siteSubSample_Scope1_Yokogawa_US_40X_BRO0117059
+plates:
+  - name: BRO0117059_40x 
+    process: true
+process: true
