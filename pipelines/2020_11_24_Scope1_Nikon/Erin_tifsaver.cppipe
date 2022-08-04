@@ -1,0 +1,139 @@
+CellProfiler Pipeline: http://www.cellprofiler.org
+Version:5
+DateRevision:413
+GitHash:
+ModuleCount:7
+HasImagePlaneDetails:False
+
+LoadData:[module_num:1|svn_version:'Unknown'|variable_revision_number:6|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Input data file location:Default Input Folder|
+    Name of the file:LoadData.csv
+    Load images based on this data?:Yes
+    Base image location:None|
+    Process just a range of rows?:No
+    Rows to process:1,100000
+    Group images by metadata?:Yes
+    Select metadata tags for grouping:Plate,Series,Well
+    Rescale intensities?:Yes
+
+ColorToGray:[module_num:2|svn_version:'Unknown'|variable_revision_number:4|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:False|wants_pause:False]
+    Select the input image:OrigImg
+    Conversion method:Split
+    Image type:Channels
+    Name the output image:OrigGray
+    Relative weight of the red channel:1.0
+    Relative weight of the green channel:1.0
+    Relative weight of the blue channel:1.0
+    Convert red to gray?:Yes
+    Name the output image:OrigRed
+    Convert green to gray?:Yes
+    Name the output image:OrigGreen
+    Convert blue to gray?:Yes
+    Name the output image:OrigBlue
+    Convert hue to gray?:Yes
+    Name the output image:OrigHue
+    Convert saturation to gray?:Yes
+    Name the output image:OrigSaturation
+    Convert value to gray?:Yes
+    Name the output image:OrigValue
+    Channel count:4
+    Channel number:1
+    Relative weight of the channel:1.0
+    Image name:OrigDNA
+    Channel number:2
+    Relative weight of the channel:1.0
+    Image name:OrigER
+    Channel number:3
+    Relative weight of the channel:1.0
+    Image name:OrigAGP
+    Channel number:4
+    Relative weight of the channel:1.0
+    Image name:OrigMito
+
+SaveImages:[module_num:3|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:DAPI
+    Select method for constructing file names:Single name
+    Select image name for file prefix:OrigImg
+    Enter single file name:Plate_\g<Plate>_Well_\g<Well>_Site_\g<Series>_DAPI
+    Number of digits:4
+    Append a suffix to the image file name?:Yes
+    Text to append to the image name:Plate_\g<Plate>_Well_\g<Well>_Site_\g<Site>_DNA
+    Saved file format:tiff
+    Output file location:Default Output Folder|\g<DataDir>
+    Image bit depth:16-bit integer
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Default Input Folder|
+    How to save the series:T (Time)
+
+SaveImages:[module_num:4|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:Cy5
+    Select method for constructing file names:Single name
+    Select image name for file prefix:OrigImg
+    Enter single file name:Plate_\g<Plate>_Well_\g<Well>_Site_\g<Series>_Cy5
+    Number of digits:4
+    Append a suffix to the image file name?:Yes
+    Text to append to the image name:Plate_\g<Plate>_Well_\g<Well>_Site_\g<Site>_DNA
+    Saved file format:tiff
+    Output file location:Default Output Folder|\g<DataDir>
+    Image bit depth:16-bit integer
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Default Input Folder|
+    How to save the series:T (Time)
+
+SaveImages:[module_num:5|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:FITC
+    Select method for constructing file names:Single name
+    Select image name for file prefix:OrigImg
+    Enter single file name:Plate_\g<Plate>_Well_\g<Well>_Site_\g<Series>_FITC
+    Number of digits:4
+    Append a suffix to the image file name?:Yes
+    Text to append to the image name:Plate_\g<Plate>_Well_\g<Well>_Site_\g<Site>_DNA
+    Saved file format:tiff
+    Output file location:Default Output Folder|\g<DataDir>
+    Image bit depth:16-bit integer
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Default Input Folder|
+    How to save the series:T (Time)
+
+SaveImages:[module_num:6|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:TRITC
+    Select method for constructing file names:Single name
+    Select image name for file prefix:OrigImg
+    Enter single file name:Plate_\g<Plate>_Well_\g<Well>_Site_\g<Series>_TRITC
+    Number of digits:4
+    Append a suffix to the image file name?:Yes
+    Text to append to the image name:Plate_\g<Plate>_Well_\g<Well>_Site_\g<Site>_DNA
+    Saved file format:tiff
+    Output file location:Default Output Folder|\g<DataDir>
+    Image bit depth:16-bit integer
+    Overwrite existing files without warning?:No
+    When to save:Every cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Default Input Folder|
+    How to save the series:T (Time)
+
+CreateBatchFiles:[module_num:7|svn_version:'Unknown'|variable_revision_number:8|show_window:True|notes:[]|batch_state:array([], dtype=uint8)|enabled:False|wants_pause:False]
+    Store batch files in default output folder?:Yes
+    Output folder path:c:\users\administrator
+    Are the cluster computers running Windows?:No
+    Hidden- in batch mode:No
+    Hidden- in distributed mode:No
+    Hidden- default input folder at time of save:C:\Users\Administrator
+    Hidden- revision number:0
+    Hidden- from old matlab:No
+    Local root path:F:\\
+    Cluster root path:jump-cellpainting/projects/2019_07_11_JUMP-CP-pilots/

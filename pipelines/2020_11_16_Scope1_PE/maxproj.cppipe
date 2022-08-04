@@ -1,0 +1,154 @@
+CellProfiler Pipeline: http://www.cellprofiler.org
+Version:5
+DateRevision:407
+GitHash:
+ModuleCount:12
+HasImagePlaneDetails:False
+
+LoadData:[module_num:1|svn_version:'Unknown'|variable_revision_number:6|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Input data file location:Default Input Folder|2020_11_16_Scope1_PE/CPBroadPhenixC1PlaneP1
+    Name of the file:load_data.csv
+    Load images based on this data?:Yes
+    Base image location:None|
+    Process just a range of rows?:No
+    Rows to process:1,100000
+    Group images by metadata?:Yes
+    Select metadata tags for grouping:Plate,Well,Site
+    Rescale intensities?:Yes
+
+MakeProjection:[module_num:2|svn_version:'Unknown'|variable_revision_number:2|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:OrigDNA
+    Type of projection:Maximum
+    Name the output image:MaxDAPI
+    Frequency:6.0
+
+MakeProjection:[module_num:3|svn_version:'Unknown'|variable_revision_number:2|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:OrigWGPhalloidin
+    Type of projection:Maximum
+    Name the output image:MaxPhalloidin
+    Frequency:6.0
+
+MakeProjection:[module_num:4|svn_version:'Unknown'|variable_revision_number:2|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:OrigMito
+    Type of projection:Maximum
+    Name the output image:MaxMito
+    Frequency:6.0
+
+MakeProjection:[module_num:5|svn_version:'Unknown'|variable_revision_number:2|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:OrigER
+    Type of projection:Maximum
+    Name the output image:MaxER
+    Frequency:6.0
+
+MakeProjection:[module_num:6|svn_version:'Unknown'|variable_revision_number:2|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the input image:OrigRNA
+    Type of projection:Maximum
+    Name the output image:MaxRNA
+    Frequency:6.0
+
+SaveImages:[module_num:7|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:MaxDAPI
+    Select method for constructing file names:From image filename
+    Select image name for file prefix:OrigDNA
+    Enter single file name:OrigBlue
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tiff
+    Output file location:Default Output Folder|
+    Image bit depth:16-bit integer
+    Overwrite existing files without warning?:No
+    When to save:Last cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...|
+    How to save the series:T (Time)
+
+SaveImages:[module_num:8|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:MaxER
+    Select method for constructing file names:From image filename
+    Select image name for file prefix:OrigER
+    Enter single file name:OrigBlue
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tiff
+    Output file location:Default Output Folder|
+    Image bit depth:16-bit integer
+    Overwrite existing files without warning?:No
+    When to save:Last cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...|
+    How to save the series:T (Time)
+
+SaveImages:[module_num:9|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:MaxPhalloidin
+    Select method for constructing file names:From image filename
+    Select image name for file prefix:OrigWGPhalloidin
+    Enter single file name:OrigBlue
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tiff
+    Output file location:Default Output Folder|
+    Image bit depth:16-bit integer
+    Overwrite existing files without warning?:No
+    When to save:Last cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...|
+    How to save the series:T (Time)
+
+SaveImages:[module_num:10|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:MaxRNA
+    Select method for constructing file names:From image filename
+    Select image name for file prefix:OrigRNA
+    Enter single file name:OrigBlue
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tiff
+    Output file location:Default Output Folder|
+    Image bit depth:16-bit integer
+    Overwrite existing files without warning?:No
+    When to save:Last cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...|
+    How to save the series:T (Time)
+
+SaveImages:[module_num:11|svn_version:'Unknown'|variable_revision_number:15|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:True|wants_pause:False]
+    Select the type of image to save:Image
+    Select the image to save:MaxMito
+    Select method for constructing file names:From image filename
+    Select image name for file prefix:OrigMito
+    Enter single file name:OrigBlue
+    Number of digits:4
+    Append a suffix to the image file name?:No
+    Text to append to the image name:
+    Saved file format:tiff
+    Output file location:Default Output Folder|
+    Image bit depth:16-bit integer
+    Overwrite existing files without warning?:No
+    When to save:Last cycle
+    Record the file and path information to the saved image?:No
+    Create subfolders in the output folder?:No
+    Base image folder:Elsewhere...|
+    How to save the series:T (Time)
+
+CreateBatchFiles:[module_num:12|svn_version:'Unknown'|variable_revision_number:8|show_window:False|notes:[]|batch_state:array([], dtype=uint8)|enabled:False|wants_pause:False]
+    Store batch files in default output folder?:Yes
+    Output folder path:/Applications/
+    Are the cluster computers running Windows?:No
+    Hidden- in batch mode:No
+    Hidden- in distributed mode:No
+    Hidden- default input folder at time of save:/Applications/
+    Hidden- revision number:0
+    Hidden- from old matlab:No
+    Local root path:/Applications/
+    Cluster root path:/Applications/
