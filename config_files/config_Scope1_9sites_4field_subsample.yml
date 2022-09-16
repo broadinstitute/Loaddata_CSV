@@ -40,7 +40,7 @@ normalize_negcon:
 feature_select:
   perform: true
   features: infer
-  level: batch
+  level: plate
   gct: true
   image_features: true
   operations:
@@ -51,7 +51,7 @@ feature_select:
 feature_select_negcon:
   perform: true
   features: infer
-  level: batch
+  level: plate
   gct: true
   image_features: true
   operations:
