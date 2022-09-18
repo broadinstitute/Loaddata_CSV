@@ -7,7 +7,7 @@ compartments:
   - cytoplasm
   - nuclei
 aggregate:
-  perform: true
+  perform: false
   plate_column: Metadata_Plate
   well_column: Metadata_Well
   method: median
@@ -17,20 +17,20 @@ aggregate:
   image_feature_categories:
     - Count
 annotate:
-  perform: true
+  perform: false
   well_column: Metadata_Well
   external :
     perform: true
     file: JUMP-MOA_compound_metadata.tsv
     merge_column: broad_sample
 normalize:
-  perform: true
+  perform: false
   method: mad_robustize
   features: infer
   mad_robustize_fudge_factor: 0
   image_features: true
 normalize_negcon:
-  perform: true
+  perform: false
   method: mad_robustize
   features: infer
   mad_robustize_fudge_factor: 0
